@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Hello World</h1>
+<h1>Hello World</h1>
+<h1>Hello World</h1>
+<h1>Hello World</h1>
+
+<script src="js/jquery-3.3.1.min.js">
+</script>
+
+<script>
+$(document).ready(function () {
+
+    console.log("AAA");
+    <!--alert("AAA");-->
+
+    $.getJSON("http://10.10.10.22:3000/s1",
+    function(data){
+        console.log(data.name);
+        console.log(data.age);
+        console.log(data.city);
+
+        Android.showToast();
+    });
+});
+
+</script>
+
+</body>
+</html>
